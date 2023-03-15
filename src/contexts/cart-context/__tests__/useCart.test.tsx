@@ -12,7 +12,7 @@ describe('[contexts] - cart-context', () => {
     let isOpen: boolean;
     const originalUseContext = React.useContext;
 
-    const setupMockUseContext = (initialIsOpen: boolean = false) => {
+    const setupMockUseContext = (initialIsOpen = false) => {
       isOpen = initialIsOpen;
       const mockIsOpen = jest.fn().mockImplementation((updatedIsOpen) => {
         isOpen = updatedIsOpen;
